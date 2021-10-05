@@ -1,4 +1,3 @@
-import { add } from 'lodash';
 import { useState } from 'react';
 
 const Header = ({setRefresh}) => {
@@ -15,11 +14,10 @@ const Header = ({setRefresh}) => {
             body: JSON.stringify(newTodo)
         }).then(() => {
             setTitle('')
-			setRefresh(true)
-
 			setTimeout(() => {
-				alert('new todo added.')
+                alert('new todo added.')
 			}, 500)
+            setRefresh(true)
         });
     }
     
